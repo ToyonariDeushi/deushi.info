@@ -1,0 +1,48 @@
+<?php include_once("include/config.php"); ?>
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+    <meta meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="出牛 豊成">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>404｜<?php echo $SITE_TITLE; ?></title>
+    <meta property="og:title" content="">
+    <meta property="og:site_name" content="<?php echo $SITE_TITLE; ?>">
+    <meta property="og:description" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<?php echo $DOCUMENT_ROOT_URL; ?>">
+    <meta property="og:image" content="<?php echo $DOCUMENT_ROOT_URL; ?>">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale:alternate" content="JA_JP">
+    <meta property="fb:app_id" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@HYPER_USHI">
+    <meta name="twitter:creator" content="@HYPER_USHI">
+    <meta name="twitter:title" content="<?php echo $SITE_TITLE; ?>">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="<?php echo $DOCUMENT_ROOT_URL; ?>">
+    <!--
+    <link rel="shortcut icon" href="<?php echo $DOCUMENT_ROOT_URL; ?>images/icon_favicon.ico">
+    <link rel="icon" href="<?php echo $DOCUMENT_ROOT_URL; ?>images/icon_favicon.ico">
+    -->
+    <link rel="stylesheet" href="<?php echo $DOCUMENT_ROOT_URL; ?>assets/css/style.css?v=<?php echo $VERSION; ?>" media="all">
+</head>
+<body>
+<div class="wrapper">
+    <?php include_once("include/siteHeader.php"); ?>
+    <div class="container">
+        <main class="mainContainer">
+            <p>404</p>
+        </main>
+        <?php include_once("include/sideContainer.php"); ?>
+    </div>
+    <?php include_once("include/siteFooter.php"); ?>
+</div>
+</body>
+</html>

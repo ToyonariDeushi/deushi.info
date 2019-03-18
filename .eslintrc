@@ -1,0 +1,31 @@
+{
+    "root": true,
+    "extends": ["standard","eslint:recommended","plugin:vue/essential", "plugin:prettier/recommended"],
+    "plugins":["vue"],
+    "rules": {
+      "indent": [ "error", 4 ],
+      "semi": [ "error", "always" ],
+        "linebreak-style": [ 2, "unix" ],
+        "prettier/prettier": [
+            "error ",
+            {
+                "semi ": false,
+                "singleQuote": false,
+                "trailingComma":  "es5"
+            }
+          ]
+    },
+    "env": {
+      "es6": true,
+      "node": true,
+      "browser": true,
+      "jquery": true
+    },
+    "globals": {
+        "PTC":false,
+        "_":false
+    },
+    "parserOptions": {
+        "sourceType": "module"
+    }
+  }

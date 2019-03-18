@@ -1,0 +1,25 @@
+{
+  "name": "deushi.info",
+  "version": "0.0.0",
+  "authors": [
+    "itoz"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "underscore": "~1.8.3",
+    "iscroll": "5.1.2",
+    "moment": "~2.15.1",
+    "jquery-ui": "~1.12.1",
+    "jquery-cookie": "~1.4.1"
+  },
+  "devDependencies": {
+  }
+}

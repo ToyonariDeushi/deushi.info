@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+@import "media_queries";// メディアクエリー
+@import "variable";// 変数ファイル
+@import "sprite";// スプライト定義
+@import "mixin";// ミックスイン
+@import "ptp-14";// フォントサイズ指定
+
+.subContainer {
+    margin-left: auto;
+    width: $subContainerWidth;
+}
+
+.subContainer__category,
+.subContainer__recentPosts,
+.subContainer__archivePosts {
+    margin-bottom: 40px;
+}
+
+.subContainer__category-title,
+.subContainer__recentPosts-title,
+.subContainer__archivePosts-title {
+    padding-left: 45px;
+    margin-bottom: 10px;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    font-size: $px18;
+    background: $mainColor;
+    box-sizing: border-box;
+}
+
+.subContainer__articleSearch {
+    margin-bottom: 20px;
+    .articleSearchForm {
+        display: flex;
+        width: 100%;
+        height: 40px;
+        input[type="search"] {
+            padding: 0 20px;
+            width: 310px;
+            border: 1px solid $mainColor;
+            border-radius: 40px;
+            box-sizing: border-box;
+            &:focus {
+                outline: 0;
+                background: $subColor;
+            }
+        }
+        button {
+            cursor: pointer;
+            margin-left: auto;
+            width: 40px;
+            background: $mainColor url("../images/icon-searchGrass.png") center center no-repeat;
+            border: none;
+            border-radius: 50%;
+            &:focus {
+                border: none;
+                outline: 0;
+            }
+        }
+        i {
+
+        }
+    }
+}
+
+.subContainer__category {
+    .subContainer__category-title {
+        background-image: url("../images/icon-category.png");
+        background-position: 10px center;
+        background-repeat: no-repeat;
+    }
+    ul {
+        li {
+            a {
+                display: block;
+                padding: 0 10px;
+                height: 40px;
+                line-height: 40px;
+                color: $baseColor;
+                box-sizing: border-box;
+                &:hover {
+                    text-decoration: none;
+                    background: $subColor;
+                }
+            }
+        }
+    }
+}
+
+.subContainer__recentPosts {
+    .subContainer__recentPosts-title {
+        background-image: url("../images/icon-recentPosts.png");
+        background-position: 14px center;
+        background-repeat: no-repeat;
+    }
+    .recentPosts-item {
+        margin-bottom: 20px;
+        height: 77px;
+
+        a {
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        .recentPosts-wrap {
+            display: flex;
+        }
+        .recentPosts-media {
+            width: (125px/($subContainerWidthSize/100))+0%;
+        }
+        .recentPosts-content {
+            margin-left: auto;
+            width: (225px/($subContainerWidthSize/100))+0%;
+            .recentPosts-title {
+                color: #000;
+                height: (57px/(77px/100))+0%;
+                line-height: 1.4;
+                font-size: $px14;
+                @include text-truncate(14, 1.4, 3, #fff);
+            }
+        }
+        .recentPosts-meta {
+            display: flex;
+            height: (20px/(77px/100))+0%;
+            .recentPosts-date,
+            .recentPosts-category {
+                display: inline-block;
+                padding: 0 10px;
+                height: 20px;
+                line-height: 20px;
+                font-size: $px12;
+                color: #fff;
+                background: $baseColor;
+            }
+            .recentPosts-date {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+.subContainer__archivePosts {
+    .subContainer__archivePosts-title {
+        background-image: url("../images/icon-archivePosts.png");
+        background-position: 14px center;
+        background-repeat: no-repeat;
+    }
+    .subContainer__archivePosts-list {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        color: $baseColor;
+        background: $subColor;
+        border: none;
+        border-radius: 0;
+    }
+}

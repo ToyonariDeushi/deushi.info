@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+@import "media_queries";// メディアクエリー
+@import "variable";// 変数ファイル
+@import "sprite";// スプライト定義
+@import "mixin";// ミックスイン
+@import "ptp-14";// フォントサイズ指定
+
+.siteFooter {
+    width: 100%;
+    height: 80px;
+    background: $mainColor;
+    .siteFooter__footerLink {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+        a {
+            line-height: 1;
+            font-size: $px16;
+            color: #fff;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    .siteFooter__copyright {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+        small {
+            line-height: 1;
+            font-size: $px12;
+            color: #fff;
+        }
+    }
+}

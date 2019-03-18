@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+$mainColor: #aad6ec;
+$subColor: #eef9ff;
+$accentColor: #fc9d9d;
+$baseColor: #5b5b5b;
+
+// 横幅（px）
+$siteWidthSize: 1200px;
+$mainContainerWidthSize: 800px;
+$subContainerWidthSize: 360px;
+
+// 横幅（%）
+$mainContainerWidth: ($mainContainerWidthSize/($siteWidthSize/100))+0%;
+$subContainerWidth: ($subContainerWidthSize/($siteWidthSize/100))+0%;
