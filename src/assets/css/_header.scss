@@ -24,15 +24,23 @@
         display: flex;
         align-items: center;
         width: $mainContainerWidth;
-        position: relative;
-        top: 0;
-        left: 0;
-        &:before {
-            content: "";
-            margin-right: 5px;
-            @include retina-sprite($sprite-icon-site-logo-group);
-        }
+        span {
+            display: inline-block;
+            line-height: 60px;
+            position: relative;
+            top: 0;
+            left: 0;
+            &:before {
+                content: "";
+                display: inline-block;
+                margin-right: 5px;
+                position: relative;
+                top: 7px;
+                left: 0;
+                @include retina-sprite($sprite-icon-site-logo-group);
 
+            }
+        }
         img {
             margin-right: 10px;
         }

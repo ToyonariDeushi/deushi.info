@@ -1,8 +1,7 @@
 <header class="siteHeader">
     <div class="siteHeader__wrap">
         <div class="siteHeader__siteTitle">
-            <!--<img src="<?php echo $DOCUMENT_ROOT_URL; ?>assets/images/icon-siteLogo.png" alt="サイトロゴ">-->
-            <span><?php echo $SITE_TITLE; ?></span>
+            <a href="<?php echo $DOCUMENT_ROOT_URL; ?>"><span><?php echo $SITE_TITLE; ?></span></a>
         </div>
         <nav class="headerNav">
             <ul>

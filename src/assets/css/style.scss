@@ -6,6 +6,7 @@
 @import "sprite";// スプライト定義
 @import "mixin";// ミックスイン
 @import "ptp-14";// フォントサイズ指定
+@import "webFont";
 
 .wrapper {
     width: 100%;
@@ -170,12 +171,19 @@
                     left: 0;
                 }
                 &:first-child {
+                    padding-left: 25px;
+                    position: relative;
+                    top: 0;
+                    left: 0;
                     &:before {
                         content: "\e900";
-                        display: inline-block;
+                        display: block;
                         font-family: 'icomoon' !important;
-                        font-size: 14px;
-                        color: #000;
+                        font-size: 18px;
+                        color: $baseColor;
+                        position: absolute;
+                        top: -3px;
+                        left: 0;
                     }
                 }
                 &:last-child {
@@ -221,19 +229,26 @@
                     top: 0;
                     left: 0;
                     &:before {
-                        content: "";
+                        content: "\e905";
+                        display: inline-block;
                         margin-right: 5px;
                         width: 26px;
                         height: 26px;
+                        font-family: 'icomoon' !important;
+                        color: #fff;
+                        font-size: 15px;
+                        line-height: 26px;
+                        text-align: center;
                         border-radius: 50%;
-                        background: $mainColor url("../images/icon-calendar.png") center center no-repeat;
+                        background-color: $mainColor;
                     }
                 }
                 // 記事編集日
                 .articlePost__date-rewrite {
                     margin-left: 20px;
                     &:before {
-                        background: $mainColor url("../images/icon-recycling.png") center center no-repeat;
+                        content: "\e902";
+                        font-size: 17px;
                     }
                 }
             }
@@ -313,6 +328,70 @@
                 background: $mainColor;
                 border-radius: 3px 3px 3px 3px;
                 box-sizing: border-box;
+            }
+        }
+        .articlePost__footer {
+            margin-bottom: 40px;
+            width: 100%;
+            .snsArea {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 40px;
+                width: 100%;
+                height: 100px;
+                background: #eee;
+                ul {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                li {
+                    margin-left: 10px;
+                    &:first-child {
+                        margin-left: 0;
+                    }
+                }
+            }
+            .profileArea {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 40px;
+                width: 100%;
+                height: 200px;
+                background: #fff;
+                border: 1px solid #eee;
+            }
+        }
+        .articlePost__nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            height: 100px;
+            background: #ccc;
+            .articlePost__navPrev {
+                width: 50%;
+                height: 100%;
+                a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .articlePost__navNext {
+                width: 50%;
+                height: 100%;
+                a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    height: 100%;
+                }
             }
         }
     }
@@ -549,6 +628,10 @@
                 display: none;
             }
         }
+        &.listStyle__current {
+            font-weight: bold;
+            font-size: $px16;
+        }
     }
     &.isStep__2 {
         li {
@@ -568,6 +651,11 @@
     &.isStep__5 {
         li {
             width: (100 / 5)+%;
+        }
+    }
+    &.isStep__6 {
+        li {
+            width: (100 / 6)+%;
         }
     }
 }
@@ -611,6 +699,7 @@ a.newTab[target=_blank] {
     position: relative;
     top: 0;
     left: 0;
+    text-decoration: underline;
     &:before {
 		content: "";
 		width: 10px;
@@ -618,8 +707,8 @@ a.newTab[target=_blank] {
 		position: absolute;
 		top: 4px;
 		right: 3px;
-		border: 1px solid #f18f99;
-		border-top: 3px solid #f18f99;
+		border: 1px solid $accentColor;
+		border-top: 3px solid $accentColor;
         background: #fff;
 	}
 	&:after {
@@ -629,8 +718,8 @@ a.newTab[target=_blank] {
 		position: absolute;
 		top: 1px;
 		right: 0;
-		border: 1px solid #cc1125;
-		border-top: 3px solid #cc1125;
+		border: 1px solid $accentColor;
+		border-top: 3px solid $accentColor;
         background: #fff;
 	}
 }
@@ -651,67 +740,10 @@ a.newTab[target=_blank] {
 }
 
 
-
-
-
-
-@font-face {
-  font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?lmypx7');
-  src:  url('../fonts/icomoon.eot?lmypx7#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?lmypx7') format('truetype'),
-    url('../fonts/icomoon.woff?lmypx7') format('woff'),
-    url('../fonts/icomoon.svg?lmypx7#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-uniE900:before {
-  content: "\e900";
-  color: #4b4b4b;
-}
-.icon-8:before {
-  content: "\e901";
-}
-.icon-1:before {
-  content: "\e902";
-}
-.icon-2:before {
-  content: "\e903";
-}
-.icon-6:before {
-  content: "\e904";
-  color: #4b4b4b;
-}
-.icon-4:before {
-  content: "\e905";
-  color: #4b4b4b;
-}
-.icon-3:before {
-  content: "\e906";
-  color: #4b4b4b;
-}
-
 .test {
-    &:before {
-        content: "\e900";
-        font-family: 'icomoon' !important;
-        font-size: 30px;
-        color: #000;
-    }
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    font-size: 40px;
+    color: #000;
 }

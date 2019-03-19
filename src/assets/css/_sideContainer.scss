@@ -5,6 +5,7 @@
 @import "sprite";// スプライト定義
 @import "mixin";// ミックスイン
 @import "ptp-14";// フォントサイズ指定
+@import "webFont";
 
 .subContainer {
     margin-left: auto;
@@ -20,7 +21,7 @@
 .subContainer__category-title,
 .subContainer__recentPosts-title,
 .subContainer__archivePosts-title {
-    padding-left: 45px;
+    padding-left: 10px;
     margin-bottom: 10px;
     height: 40px;
     line-height: 40px;
@@ -45,15 +46,31 @@
             &:focus {
                 outline: 0;
                 background: $subColor;
+                border: 2px solid $mainColor;
+            }
+            &:hover {
+                border: 2px solid $mainColor;
             }
         }
         button {
             cursor: pointer;
             margin-left: auto;
             width: 40px;
-            background: $mainColor url("../images/icon-searchGrass.png") center center no-repeat;
+            height: 40px;
+            position: relative;
+            top: 0;
+            left: 0;
+            background-color: $mainColor;
             border: none;
             border-radius: 50%;
+            &:before {
+                content: "\e901";
+                display: inline-block;
+                font-family: 'icomoon' !important;
+                color: #fff;
+                font-size: 20px;
+                text-align: center;
+            }
             &:focus {
                 border: none;
                 outline: 0;
@@ -67,9 +84,18 @@
 
 .subContainer__category {
     .subContainer__category-title {
-        background-image: url("../images/icon-category.png");
-        background-position: 10px center;
-        background-repeat: no-repeat;
+        position: relative;
+        top: 0;
+        left: 0;
+        &:before {
+            content: "\e904";
+            display: inline-block;
+            margin-right: 8px;
+            font-family: 'icomoon' !important;
+            color: #fff;
+            font-size: 20px;
+            text-align: center;
+        }
     }
     ul {
         li {
@@ -91,9 +117,18 @@
 
 .subContainer__recentPosts {
     .subContainer__recentPosts-title {
-        background-image: url("../images/icon-recentPosts.png");
-        background-position: 14px center;
-        background-repeat: no-repeat;
+        position: relative;
+        top: 0;
+        left: 0;
+        &:before {
+            content: "\e903";
+            display: inline-block;
+            margin-right: 8px;
+            font-family: 'icomoon' !important;
+            color: #fff;
+            font-size: 22px;
+            text-align: center;
+        }
     }
     .recentPosts-item {
         margin-bottom: 20px;
@@ -143,9 +178,18 @@
 
 .subContainer__archivePosts {
     .subContainer__archivePosts-title {
-        background-image: url("../images/icon-archivePosts.png");
-        background-position: 14px center;
-        background-repeat: no-repeat;
+        position: relative;
+        top: 0;
+        left: 0;
+        &:before {
+            content: "\e906";
+            display: inline-block;
+            margin-right: 8px;
+            font-family: 'icomoon' !important;
+            color: #fff;
+            font-size: 22px;
+            text-align: center;
+        }
     }
     .subContainer__archivePosts-list {
         width: 100%;
