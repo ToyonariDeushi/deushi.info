@@ -5,33 +5,42 @@
     <meta meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-    <meta name="robots" content="index,follow">
-    <meta name="author" content="出牛 豊成">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
+    <meta name="robots" content="<?php echo $ROBOTS; ?>">
+    <meta name="author" content="<?php echo $author; ?>">
+    <meta name="keywords" content="<?php echo $keyword_list; ?>">
+    <meta name="description" content="<?php echo $description; ?>">
     <title><?php echo $SITE_TITLE; ?></title>
-    <meta property="og:title" content="">
+    <meta property="og:title" content="トップのページです。">
     <meta property="og:site_name" content="<?php echo $SITE_TITLE; ?>">
-    <meta property="og:description" content="">
+    <meta property="og:description" content="<?php echo $description; ?>">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="<?php echo $DOCUMENT_ROOT_URL; ?>">
-    <meta property="og:image" content="<?php echo $DOCUMENT_ROOT_URL; ?>">
+    <meta property="og:url" content="<?php echo $REQUEST_URL ?>">
+    <meta property="og:image" content="<?php echo $DOCUMENT_ROOT_URL; ?>assets/images/image-ogp.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:locale:alternate" content="JA_JP">
-    <meta property="fb:app_id" content="">
+    <meta property="fb:app_id" content="<?php echo $fbAppId; ?>">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@HYPER_USHI">
     <meta name="twitter:creator" content="@HYPER_USHI">
     <meta name="twitter:title" content="<?php echo $SITE_TITLE; ?>">
-    <meta name="twitter:description" content="">
-    <meta name="twitter:image" content="<?php echo $DOCUMENT_ROOT_URL; ?>">
-    <!--
-    <link rel="shortcut icon" href="<?php echo $DOCUMENT_ROOT_URL; ?>images/icon_favicon.ico">
-    <link rel="icon" href="<?php echo $DOCUMENT_ROOT_URL; ?>images/icon_favicon.ico">
-    -->
+    <meta name="twitter:description" content="<?php echo $description; ?>">
+    <meta name="twitter:image" content="<?php echo $DOCUMENT_ROOT_URL; ?>assets/images/image-ogp.png">
+    <link rel="shortcut icon" href="<?php echo $DOCUMENT_ROOT_URL; ?>assets/images/favicon.ico">
+    <link rel="icon" href="<?php echo $DOCUMENT_ROOT_URL; ?>assets/images/favicon.ico">
     <link rel="stylesheet" href="<?php echo $DOCUMENT_ROOT_URL; ?>assets/css/style.css?v=<?php echo $VERSION; ?>" media="all">
+    <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137971300-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-137971300-1');
+    </script>
 </head>
 <body>
 <div class="wrapper">

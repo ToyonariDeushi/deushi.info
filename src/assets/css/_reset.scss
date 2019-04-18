@@ -40,8 +40,8 @@ html {
 	overflow-y: scroll;
     font-size: 14px;
 	font-family:
+    "M PLUS 1p","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,
     "Helvetica Neue",Helvetica,Arial,sans-serif,
-    "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,
     "メイリオ",Meiryo,"MS Pゴシック","MS PGothic",sans-serif,
     system-ui,
     /* macOS 10.11-10.12 */ -apple-system,
@@ -261,7 +261,7 @@ a {
 small {
 	color: #f00;
 }
-
+/*
 ruby {
 	display: inline-table;
 	margin: 0;
@@ -291,6 +291,33 @@ a:visited ruby rt {
 ruby rp {
     display: none;
 }
+*/
+ruby {
+	display: inline-table;
+	margin: 0;
+	padding: 0;
+	border: none;
+	white-space: nowrap;
+	text-indent: 0;
+	vertical-align: text-bottom !important;
+	text-decoration: none;
+	text-align: center;
+	line-height: 100%;
+}
+
+ruby rt,
+a:link ruby rt,
+a:visited ruby rt {
+	display: table-header-group;
+	margin: 0;
+	padding: 0;
+	border: none;
+	font: inherit;
+	font-size: 70%;
+	line-height: 100%;
+	text-decoration: none;
+}
+
 
 // 追記
 // * {

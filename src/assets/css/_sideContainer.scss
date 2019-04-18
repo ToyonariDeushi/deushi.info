@@ -21,10 +21,11 @@
 .subContainer__category-title,
 .subContainer__recentPosts-title,
 .subContainer__archivePosts-title {
+    display: flex;
+    align-items: center;
     padding-left: 10px;
     margin-bottom: 10px;
     height: 40px;
-    line-height: 40px;
     color: #fff;
     font-size: $px18;
     background: $mainColor;
@@ -39,7 +40,7 @@
         height: 40px;
         input[type="search"] {
             padding: 0 20px;
-            width: 310px;
+            width: (310px/(360px/100))+0%;
             border: 1px solid $mainColor;
             border-radius: 40px;
             box-sizing: border-box;
@@ -55,7 +56,7 @@
         button {
             cursor: pointer;
             margin-left: auto;
-            width: 40px;
+            width: (40px/(360px/100))+0%;
             height: 40px;
             position: relative;
             top: 0;
@@ -88,7 +89,7 @@
         top: 0;
         left: 0;
         &:before {
-            content: "\e904";
+            content: "\e9ba";
             display: inline-block;
             margin-right: 8px;
             font-family: 'icomoon' !important;
@@ -106,9 +107,14 @@
                 line-height: 40px;
                 color: $baseColor;
                 box-sizing: border-box;
+                position: relative;
+                top: 0;
+                left: 0;
+                transition: all 0.2s ease-in;
                 &:hover {
                     text-decoration: none;
                     background: $subColor;
+                    transition: all 0.1s ease-in;
                 }
             }
         }
@@ -152,8 +158,8 @@
                 color: #000;
                 height: (57px/(77px/100))+0%;
                 line-height: 1.4;
-                font-size: $px14;
-                @include text-truncate(14, 1.4, 3, #fff);
+                font-size: $px12;
+                @include text-truncate(12, 1.5, 3, #fff);
             }
         }
         .recentPosts-meta {
@@ -182,7 +188,7 @@
         top: 0;
         left: 0;
         &:before {
-            content: "\e906";
+            content: "\e92b";
             display: inline-block;
             margin-right: 8px;
             font-family: 'icomoon' !important;
@@ -199,5 +205,232 @@
         background: $subColor;
         border: none;
         border-radius: 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+// レスポンシブ
+@media #{$middle} {
+    .subContainer {
+        margin-left: auto;
+        width: 100%;
+    }
+
+    .subContainer__category,
+    .subContainer__recentPosts,
+    .subContainer__archivePosts {
+        margin-bottom: 40px;
+    }
+
+    .subContainer__category-title,
+    .subContainer__recentPosts-title,
+    .subContainer__archivePosts-title {
+        display: flex;
+        align-items: center;
+        padding-left: 10px;
+        margin-bottom: 10px;
+        height: 40px;
+        color: #fff;
+        font-size: $px18;
+        background: $mainColor;
+        box-sizing: border-box;
+    }
+
+    .subContainer__articleSearch {
+        width: 100%;
+        padding: 20px 10px;
+        margin-bottom: 0;
+        box-sizing: border-box;
+        border-top: 1px solid $mainColor;
+        .articleSearchForm {
+            display: flex;
+            width: 100%;
+            height: 40px;
+            input[type="search"] {
+                padding: 0 20px;
+                width: (300px/(355px/100))+0%;
+                border: 1px solid $mainColor;
+                border-radius: 40px;
+                box-sizing: border-box;
+                &:focus {
+                    outline: 0;
+                    background: $subColor;
+                    border: 2px solid $mainColor;
+                }
+                &:hover {
+                    border: 2px solid $mainColor;
+                }
+            }
+            button {
+                cursor: pointer;
+                margin-left: auto;
+                width: (40px/(355px/100))+0%;
+                height: 40px;
+                position: relative;
+                top: 0;
+                left: 0;
+                background-color: $mainColor;
+                border: none;
+                border-radius: 50%;
+                &:before {
+                    content: "\e901";
+                    display: inline-block;
+                    font-family: 'icomoon' !important;
+                    color: #fff;
+                    font-size: 20px;
+                    text-align: center;
+                }
+                &:focus {
+                    border: none;
+                    outline: 0;
+                }
+            }
+            i {
+
+            }
+        }
+    }
+
+    .subContainer__category {
+        .subContainer__category-title {
+            position: relative;
+            top: 0;
+            left: 0;
+            &:before {
+                content: "\e9ba";
+                display: inline-block;
+                margin-right: 8px;
+                font-family: 'icomoon' !important;
+                color: #fff;
+                font-size: 20px;
+                text-align: center;
+            }
+        }
+        ul {
+            li {
+                a {
+                    display: block;
+                    padding: 0 10px;
+                    height: 40px;
+                    line-height: 40px;
+                    color: $baseColor;
+                    box-sizing: border-box;
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    transition: all 0.2s ease-in;
+                    border-bottom: 1px solid $mainColor;
+                    &:hover {
+                        text-decoration: none;
+                        background: $subColor;
+                        transition: all 0.1s ease-in;
+                    }
+                }
+                &:first-child {
+                    border-top: 1px solid $mainColor;
+                }
+            }
+        }
+    }
+
+    .subContainer__recentPosts {
+        .subContainer__recentPosts-title {
+            position: relative;
+            top: 0;
+            left: 0;
+            &:before {
+                content: "\e903";
+                display: inline-block;
+                margin-right: 8px;
+                font-family: 'icomoon' !important;
+                color: #fff;
+                font-size: 22px;
+                text-align: center;
+            }
+        }
+        .recentPosts-item {
+            margin-bottom: 10px;
+            height: 77px;
+
+            a {
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+            .recentPosts-wrap {
+                display: flex;
+                width: 100%;
+                box-sizing: border-box;
+                padding: 0 10px;
+            }
+            .recentPosts-media {
+                width: (125px/($subContainerWidthSize/100))+0%;
+            }
+            .recentPosts-content {
+                margin-left: auto;
+                width: (225px/($subContainerWidthSize/100))+0%;
+                .recentPosts-title {
+                    color: #000;
+                    height: (57px/(77px/100))+0%;
+                    line-height: 1.4;
+                    font-size: $px12;
+                    @include text-truncate(12, 1.5, 3, #fff);
+                }
+            }
+            .recentPosts-meta {
+                display: flex;
+                height: (20px/(77px/100))+0%;
+                .recentPosts-date,
+                .recentPosts-category {
+                    display: inline-block;
+                    padding: 0 10px;
+                    height: 20px;
+                    line-height: 20px;
+                    font-size: $px12;
+                    color: #fff;
+                    background: $baseColor;
+                }
+                .recentPosts-date {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    .subContainer__archivePosts {
+        .subContainer__archivePosts-title {
+            position: relative;
+            top: 0;
+            left: 0;
+            &:before {
+                content: "\e92b";
+                display: inline-block;
+                margin-right: 8px;
+                font-family: 'icomoon' !important;
+                color: #fff;
+                font-size: 22px;
+                text-align: center;
+            }
+        }
+        .subContainer__archivePosts-list {
+            padding: 0 10px;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            color: $baseColor;
+            background: $subColor;
+            border: none;
+            border-radius: 0;
+            box-sizing: border-box;
+        }
     }
 }
