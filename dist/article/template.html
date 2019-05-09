@@ -1,41 +1,51 @@
-<?php include_once("include/config.php"); ?>
+<?php include_once("../include/config.php"); ?>
 <!DOCTYPE html>
 <html lang="ja">
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
     <meta meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-    <meta name="robots" content="index,follow">
-    <meta name="author" content="出牛 豊成">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
+    <meta name="robots" content="<?php echo $ROBOTS; ?>">
+    <meta name="author" content="<?php echo $author; ?>">
+    <meta name="keywords" content="<?php echo $keyword_list; ?>">
+    <meta name="description" content="<?php echo $description; ?>">
     <title><?php echo $SITE_TITLE; ?></title>
     <meta property="og:title" content="">
     <meta property="og:site_name" content="<?php echo $SITE_TITLE; ?>">
-    <meta property="og:description" content="">
+    <meta property="og:description" content="<?php echo $description; ?>">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="<?php echo $DOCUMENT_ROOT_URL; ?>">
-    <meta property="og:image" content="<?php echo $DOCUMENT_ROOT_URL; ?>">
+    <meta property="og:url" content="<?php echo $REQUEST_URL ?>">
+    <meta property="og:image" content="<?php echo $DOCUMENT_ROOT_URL; ?>assets/images/image-ogp.png">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:locale:alternate" content="JA_JP">
-    <meta property="fb:app_id" content="">
+    <meta property="fb:app_id" content="<?php echo $fbAppId; ?>">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@HYPER_USHI">
     <meta name="twitter:creator" content="@HYPER_USHI">
     <meta name="twitter:title" content="<?php echo $SITE_TITLE; ?>">
-    <meta name="twitter:description" content="">
+    <meta name="twitter:description" content="<?php echo $description; ?>">
     <meta name="twitter:image" content="<?php echo $DOCUMENT_ROOT_URL; ?>">
-    <!--
-    <link rel="shortcut icon" href="<?php echo $DOCUMENT_ROOT_URL; ?>images/icon_favicon.ico">
-    <link rel="icon" href="<?php echo $DOCUMENT_ROOT_URL; ?>images/icon_favicon.ico">
-    -->
+    <link rel="shortcut icon" href="<?php echo $DOCUMENT_ROOT_URL; ?>assets/images/favicon.ico">
+    <link rel="icon" href="<?php echo $DOCUMENT_ROOT_URL; ?>assets/images/favicon.ico">
     <link rel="stylesheet" href="<?php echo $DOCUMENT_ROOT_URL; ?>assets/css/style.css?v=<?php echo $VERSION; ?>" media="all">
+    <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-137971300-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-137971300-1');
+    </script>
 </head>
 <body>
+<?php include_once("../include/test.php"); ?>
 <div class="wrapper">
-    <?php include_once("include/siteHeader.php"); ?>
+    <?php include_once("../include/siteHeader.php"); ?>
     <div class="container">
         <main class="mainContainer">
             <nav class="breadCrumb">
@@ -115,7 +125,7 @@
                     </blockquote>
                     <div class="voiceBox__left">
                         <figure class="voiceBox__icon">
-                            <img src="<?php echo $DOCUMENT_ROOT_URL; ?>assets/images/icon-siteLogo.png" alt="">
+                            <img src="<?php echo $DOCUMENT_ROOT_URL; ?>assets/images/peaple-ushi.png" alt="">
                             <figcaption class="voiceBox__name">人物名A</figcaption>
                         </figure>
                         <div class="voiceBox__comment">
@@ -124,7 +134,7 @@
                     </div>
                     <div class="voiceBox__left">
                         <figure class="voiceBox__icon">
-                            <img src="<?php echo $DOCUMENT_ROOT_URL; ?>assets/images/icon-siteLogo.png" alt="">
+                            <img src="<?php echo $DOCUMENT_ROOT_URL; ?>assets/images/peaple-ushi.png" alt="">
                             <figcaption class="voiceBox__name">人物名A</figcaption>
                         </figure>
                         <div class="voiceBox__comment">
@@ -134,7 +144,7 @@
                     </div>
                     <div class="voiceBox__right">
                         <figure class="voiceBox__icon">
-                            <img src="<?php echo $DOCUMENT_ROOT_URL; ?>assets/images/icon-siteLogo.png" alt="">
+                            <img src="<?php echo $DOCUMENT_ROOT_URL; ?>assets/images/peaple-ushi.png" alt="">
                             <figcaption class="voiceBox__name">人物名B</figcaption>
                         </figure>
                         <div class="voiceBox__comment">
@@ -143,7 +153,7 @@
                     </div>
                     <div class="voiceBox__right lastBox">
                         <figure class="voiceBox__icon">
-                            <img src="<?php echo $DOCUMENT_ROOT_URL; ?>assets/images/icon-siteLogo.png" alt="">
+                            <img src="<?php echo $DOCUMENT_ROOT_URL; ?>assets/images/peaple-ushi.png" alt="">
                             <figcaption class="voiceBox__name">人物名A</figcaption>
                         </figure>
                         <div class="voiceBox__comment">
@@ -179,6 +189,24 @@
                     </div>
                     <div class="buttonTypeArea isRight">
                         <a href="#" class="buttonType__01">汎用的なボタン</a>
+                    </div>
+                    <div class="buttonTypeArea isLeft">
+                        <a href="#" target="_blank" class="buttonType__01 newTab">汎用的なボタン</a>
+                    </div>
+                    <div class="buttonTypeArea isCenter">
+                        <a href="#" target="_blank" class="buttonType__01 newTab">汎用的なボタン</a>
+                    </div>
+                    <div class="buttonTypeArea isRight">
+                        <a href="#" target="_blank" class="buttonType__01 newTab">汎用的なボタン</a>
+                    </div>
+
+                    <div class="column__2">
+                        <div class="buttonTypeArea">
+                            <a href="#" target="_blank" class="buttonType__01 newTab">汎用的なボタン</a>
+                        </div>
+                        <div class="buttonTypeArea">
+                            <a href="#" target="_blank" class="buttonType__01 newTab">汎用的なボタン</a>
+                        </div>
                     </div>
                     <dl class="explainBox">
                         <dt>説明</dt>
@@ -240,57 +268,20 @@
                         <img src="<?php echo $DOCUMENT_ROOT_URL; ?>assets/images/sample-thum.jpg" alt="test">
                     </div>
                     <p>ああ嘉納さんを招待飯全く実在がすれな知人同じ本位私か約束をといったご落第ましたたますて、その今日は私かがた尻馬にあるので、嘉納さんの事を実の私にどうもご存在とするてここ学生をご教育にしように単にご指図よりありですたて、何しろさぞ前後を取りつかれんているませのに考えるなます。</p>
-                    <ul class="test">
-                        <li class="icon-glass"></li>
-                        <li class="icon-file"></li>
-                        <li class="icon-home"></li>
-                        <li class="icon-file-zip"></li>
-                        <li class="icon-calendar"></li>
-                        <li class="icon-list"></li>
-                        <li class="icon-loop"></li>
-                        <li class="icon-new-tab"></li>
-                        <li class="icon-amazon"></li>
-                        <li class="icon-facebook"></li>
-                        <li class="icon-twitter"></li>
-                        <li class="icon-github"></li>
-                    </ul>
                 </section>
                 <footer class="articlePost__footer">
-                    <div class="snsArea">
-                        <ul>
-                            <li>
-                                <div id="fb-root"></div>
-                                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&autoLogAppEvents=1&version=v3.2&appId=113530675411715"></script>
-                                <div class="fb-share-button" data-href="https://www.deushi.info/" data-layout="box_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.deushi.info%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">シェア</a></div>
-                            </li>
-                            <li>
-                                <div id="fb-root"></div>
-                                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v3.2&appId=113530675411715&autoLogAppEvents=1"></script>
-                                <div class="fb-like" data-href="https://www.deushi.info/" data-layout="box_count" data-action="like" data-size="large" data-show-faces="true" data-share="false"></div>
-                            </li>
-                            <li>
-                                <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://www.deushi.info/" data-via="HYPER_USHI" data-text="ああああああああ" data-related="test1,test2" data-count="vertical" data-lang="ja" data-hashtags="ハイパー牛ろぐ" data-size="large">ツイート</a>
-                                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                            </li>
-                            <li>
-                                <div class="line-it-button" data-lang="ja" data-type="share-e" data-ver="2" data-url="https://www.deushi.info/" style="display: none;"></div>
-                                <script src="https://d.line-scdn.net/r/web/social-plugin/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="profileArea">
-                        <p>プロフィール欄</p>
-                    </div>
-                    <aside class="articlePost__nav">
-                        <div class="articlePost__navPrev"><a href="#">前の記事</a></div>
-                        <div class="articlePost__navNext"><a href="">次の記事</a></div>
+                    <?php include_once("../include/snsArea.php"); ?>
+                    <?php include_once("../include/profileArea.php"); ?>
+                    <aside class="pageNation">
+                        <div class="pageNation__prev-active"><a href="<?php echo $DOCUMENT_ROOT_URL; ?>">前の記事</a></div>
+                        <div class="pageNation__next-active"><a href="<?php echo $DOCUMENT_ROOT_URL; ?>">次の記事</a></div>
                     </aside>
                 </footer>
             </article>
         </main>
-        <?php include_once("include/sideContainer.php"); ?>
+        <?php include_once("../include/sideContainer.php"); ?>
     </div>
-    <?php include_once("include/siteFooter.php"); ?>
+    <?php include_once("../include/siteFooter.php"); ?>
 </div>
 </body>
 </html>
