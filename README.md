@@ -26,48 +26,6 @@ title | link
 jsについて | [全体に与える初期化処理](https://github.com/kakusin/pokemon-card/wiki/%5Bjs%5D-%E5%85%A8%E4%BD%93%E3%81%AB%E5%BD%B1%E9%9F%BF%E3%82%92%E4%B8%8E%E3%81%88%E3%82%8B%E6%8C%99%E5%8B%95)
 cssについて |  [PCとSPで表示を切り替える方法](https://github.com/kakusin/pokemon-card/wiki/%5Bcss%5D-PC%E3%81%A8SP%E3%81%A7%E8%A1%A8%E7%A4%BA%E3%82%92%E5%88%87%E3%82%8A%E6%9B%BF%E3%81%88%E3%82%8B)
 
-
-### :evergreen_tree: 別のリポジトリで管理されているページ
-
-
-|title| path | repository |
---|--|--
-| EX(500円デッキ) | | https://github.com/kakusin/pokemon-card-ex |
-| GXスタートデッキ タイプ診断 | | https://github.com/kakusin/pokemon-card-gx-shindan |
-| 20周年記念ページ | /20th |https://github.com/kakusin/poke-card20th |
-| sm9 | /ex/sm9 |https://github.com/kakusin/pokemon-card-ex-sm9 |
-| sm8b | /ex/sm8b |https://github.com/kakusin/pokemon-card-ex |
-
-
-
----
-
-## \:cloud: 確認サーバー一覧
-
-| 社内確認環境(heteml)　| | http://pokemon-card-dev.kakus.in/ |
---|--|:--
-| Basic | user | pokemoncarduser |
-|       | pass | uUBDhp7hc |
-| FTP   | host | ftp-kakusin-g.heteml.net |
-|       | user | kakusin-g_pokeca-dev |
-|       | pass | kakus1nkakus1n |
-
-|develop環境(ip制限あり) |  | http://develop.pokemon-card.com/ |
---|--|:--
-| SFTP | host | 54.65.51.218 |
-| | user | kksn |
-| | pass | bWzP4QmM |
-| | dir | /var/www2/html/develop.pokemon-card.com/htdocs |
-
-| staging環境(ip制限あり) |  | http://staging.pokemon-card.com/ |
---|--|:--
-| SFTP | host | 54.65.51.218 |
-| | user | kksn |
-| | pass | bWzP4QmM |
-| | dir | /var/www2/html/staging.pokemon-card.com/htdocs |
-
----
-
 # \:beginner: プロジェクトを初めて設定するには？
 
 下記が必要です
